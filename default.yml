@@ -1,0 +1,149 @@
+# This styleguide is built on top of the default Rubocop styleguide, located here:
+# https://github.com/bbatsov/rubocop/blob/master/config/default.yml.
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+
+Rails:
+  Enabled: true
+
+Metrics/AbcSize:
+  Enabled: false
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+# Ideally, I would like to insert empty lines at the beginning on a class definition, but not at the
+# end. https://github.com/bbatsov/rubocop/issues/4812
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+  NumberOfEmptyLines: 1
+
+Layout/EndOfLine:
+  EnforcedStyle: lf
+
+Layout/ExtraSpacing:
+  AllowForAlignment: false
+
+Layout/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
+Layout/IndentArray:
+  EnforcedStyle: consistent
+
+Layout/IndentHash:
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/SpaceAroundOperators:
+  AllowForAlignment: false
+
+Layout/SpaceBeforeFirstArg:
+  AllowForAlignment: false
+
+# TODO: Reenable this if/when Rubocop supports spacing inside arrays.
+Layout/SpaceInsideBrackets:
+  Enabled: false
+
+Layout/SpaceInsideStringInterpolation:
+  EnforcedStyle: space
+
+Naming/FileName:
+  ExpectMatchingDefinition: true
+  Exclude:
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'spec/**/*'
+
+Style/ConditionalAssignment:
+  EnforcedStyle: assign_inside_condition
+
+Style/Copyright:
+  Enabled: false
+
+# TODO: Consider turning this on for controller methods in the future if we extract Swagger
+# documentation from them.
+Style/Documentation:
+  Enabled: false
+
+Style/FormatString:
+  EnforcedStyle: percent
+
+# This won't be necessary when we upgrade to Ruby 3.0. Until then, rather than adding a comment to
+# every file, we should simply not mutate strings.
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/IfUnlessModifier:
+  MaxLineLength: 100
+
+Style/StringLiterals:
+  Exclude:
+    - 'spec/**/*'
+
+Style/ReturnNil:
+  Enabled: true
+
+Style/SymbolArray:
+  MinSize: 3
+
+Style/WhileUntilModifier:
+  MaxLineLength: 100
+
+Style/WordArray:
+  MinSize: 3
+
+Metrics/BlockLength:
+  Enabled: true
+  Max: 100
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ClassLength:
+  Enabled: true
+  Max: 300
+
+Metrics/MethodLength:
+  Max: 50
+
+Metrics/LineLength:
+  Max: 100
+  AllowHeredoc: false
+  AllowURI: false
+
+Lint/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+
+Rails/RequestReferer:
+  EnforcedStyle: referrer
+
+Rails/Date:
+  EnforcedStyle: strict
+
+Rails/TimeZone:
+  EnforcedStyle: flexible
+
+Rails/FilePath:
+  Enabled: false
