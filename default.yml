@@ -53,15 +53,14 @@ Layout/MultilineMethodCallIndentation:
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: space
+
 Layout/SpaceAroundOperators:
   AllowForAlignment: false
 
 Layout/SpaceBeforeFirstArg:
   AllowForAlignment: false
-
-# TODO: Reenable this if/when Rubocop supports spacing inside arrays.
-Layout/SpaceInsideBrackets:
-  Enabled: false
 
 Layout/SpaceInsideStringInterpolation:
   EnforcedStyle: space
