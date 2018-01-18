@@ -145,5 +145,5 @@ Rails/FilePath:
 Rails/InverseOf:
   Enabled: false
 
-Style/MultilineTernaryOperator
+Style/MultilineTernaryOperator:
   Enabled: false
