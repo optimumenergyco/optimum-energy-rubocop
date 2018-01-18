@@ -144,3 +144,6 @@ Rails/FilePath:
 # TODO: Enable once this is fixed: https://github.com/bbatsov/rubocop/issues/5236
 Rails/InverseOf:
   Enabled: false
+
+Style/MultilineTernaryOperator
+  Enabled: false
