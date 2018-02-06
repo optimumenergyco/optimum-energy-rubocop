@@ -147,3 +147,6 @@ Rails/InverseOf:
 
 Style/MultilineTernaryOperator:
   Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
