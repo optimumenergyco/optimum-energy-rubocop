@@ -115,6 +115,9 @@ Metrics/ClassLength:
   Enabled: true
   Max: 300
 
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
 Metrics/MethodLength:
   Max: 50
 
@@ -123,6 +126,9 @@ Metrics/LineLength:
   AllowHeredoc: false
   AllowURI: false
 
+Metrics/PerceivedComplexity:
+  Enabled: false
+  
 Lint/BlockAlignment:
   EnforcedStyleAlignWith: start_of_block
 
