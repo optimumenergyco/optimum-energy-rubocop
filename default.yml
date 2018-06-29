@@ -74,7 +74,7 @@ Naming/FileName:
     - 'spec/**/*'
 
 Style/ConditionalAssignment:
-  EnforcedStyle: assign_inside_condition
+  EnforcedStyle: assign_to_condition
 
 Style/Copyright:
   Enabled: false
