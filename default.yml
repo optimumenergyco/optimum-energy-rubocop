@@ -129,10 +129,10 @@ Metrics/LineLength:
 Metrics/PerceivedComplexity:
   Enabled: false
   
-Lint/BlockAlignment:
+Layout/BlockAlignment:
   EnforcedStyleAlignWith: start_of_block
 
-Lint/EndAlignment:
+Layout/EndAlignment:
   EnforcedStyleAlignWith: start_of_line
 
 Rails/RequestReferer:
