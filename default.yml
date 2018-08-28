@@ -10,7 +10,10 @@ Rails:
 
 Metrics/AbcSize:
   Enabled: false
-
+  
+Layout/AlignHash:
+  Enabled: false 
+  
 Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
