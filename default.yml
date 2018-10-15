@@ -10,15 +10,18 @@ Rails:
 
 Metrics/AbcSize:
   Enabled: false
-  
+
 Layout/AlignHash:
-  Enabled: false 
-  
+  Enabled: false
+
 Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
 Layout/CaseIndentation:
   EnforcedStyle: end
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
 
 # Ideally, I would like to insert empty lines at the beginning on a class definition, but not at the
 # end. https://github.com/bbatsov/rubocop/issues/4812
@@ -34,6 +37,7 @@ Layout/EmptyLinesAroundModuleBody:
 Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
   NumberOfEmptyLines: 1
+
 
 Layout/EndOfLine:
   EnforcedStyle: lf
@@ -75,6 +79,8 @@ Naming/FileName:
     - 'bin/**/*'
     - 'db/**/*'
     - 'spec/**/*'
+    - '**/config.ru'
+    - 'lib/tasks/**'
 
 Style/ConditionalAssignment:
   EnforcedStyle: assign_to_condition
@@ -87,6 +93,9 @@ Style/Copyright:
 Style/Documentation:
   Enabled: false
 
+Style/DoubleNegation:
+  Enabled: false
+
 Style/FormatString:
   EnforcedStyle: percent
 
@@ -95,12 +104,21 @@ Style/FormatString:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
-Style/StringLiterals:
-  Exclude:
-    - 'spec/**/*'
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
 
 Style/ReturnNil:
   Enabled: true
+
+Style/StringLiterals:
+  Exclude:
+    - 'spec/**/*'
 
 Style/SymbolArray:
   MinSize: 3
@@ -131,21 +149,15 @@ Metrics/LineLength:
 
 Metrics/PerceivedComplexity:
   Enabled: false
-  
+
 Layout/BlockAlignment:
   EnforcedStyleAlignWith: start_of_block
 
 Layout/EndAlignment:
   EnforcedStyleAlignWith: start_of_line
 
-Rails/RequestReferer:
-  EnforcedStyle: referrer
-
 Rails/Date:
   EnforcedStyle: strict
-
-Rails/TimeZone:
-  EnforcedStyle: flexible
 
 Rails/FilePath:
   Enabled: false
@@ -154,8 +166,11 @@ Rails/FilePath:
 Rails/InverseOf:
   Enabled: false
 
-Style/MultilineTernaryOperator:
-  Enabled: false
-
 Rails/NotNullColumn:
   Enabled: false
+
+Rails/RequestReferer:
+  EnforcedStyle: referrer
+
+Rails/TimeZone:
+  EnforcedStyle: flexible
