@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    optimum-energy-rubocop-config (0.0.8)
+    optimum-energy-rubocop-config (0.1.0)
       rubocop (~> 0.50)
 
 GEM
