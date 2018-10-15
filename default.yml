@@ -20,6 +20,9 @@ Layout/AlignParameters:
 Layout/CaseIndentation:
   EnforcedStyle: end
 
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
 # Ideally, I would like to insert empty lines at the beginning on a class definition, but not at the
 # end. https://github.com/bbatsov/rubocop/issues/4812
 Layout/EmptyLinesAroundClassBody:
@@ -34,6 +37,7 @@ Layout/EmptyLinesAroundModuleBody:
 Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
   NumberOfEmptyLines: 1
+
 
 Layout/EndOfLine:
   EnforcedStyle: lf
@@ -75,6 +79,8 @@ Naming/FileName:
     - 'bin/**/*'
     - 'db/**/*'
     - 'spec/**/*'
+    - '**/config.ru'
+    - 'lib/tasks/**'
 
 Style/ConditionalAssignment:
   EnforcedStyle: assign_to_condition
