@@ -82,6 +82,9 @@ Naming/FileName:
     - '**/config.ru'
     - 'lib/tasks/**'
 
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+  
 Style/ConditionalAssignment:
   EnforcedStyle: assign_to_condition
 
@@ -106,7 +109,7 @@ Style/FrozenStringLiteralComment:
 
 Style/MultilineBlockChain:
   Enabled: false
-  
+
 Style/MultilineTernaryOperator:
   Enabled: false
 
