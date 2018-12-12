@@ -81,7 +81,9 @@ Naming/FileName:
     - 'spec/**/*'
     - '**/config.ru'
     - 'lib/tasks/**'
-
+Rails/BulkChangeTable:
+  Enabled: false
+  
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
   
