@@ -1,0 +1,9 @@
+-
+  name: rubocop
+  service: optimum-energy-rubocop
+  command: rubocop
+-
+  name: publish-to-rubygems
+  service: optimum-energy-rubocop
+  command: publish
+  tag: master
