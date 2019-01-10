@@ -1,7 +1,7 @@
-FROM ruby:2.5.3
+FROM ruby:2.6.0
 
 # Install the dependencies
-ADD Gemfile Gemfile.lock .ruby-version /app/
+ADD Gemfile Gemfile.lock .ruby-version optimum-energy-rubocop.gemspec VERSION.txt /app/
 WORKDIR /app
 RUN bundle install
 
