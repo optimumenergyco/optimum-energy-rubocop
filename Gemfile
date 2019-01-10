@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby IO.read('.ruby-version')
+ruby IO.read(".ruby-version")
 
 gemspec
