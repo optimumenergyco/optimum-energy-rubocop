@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# This script publishes this gem to rubygems.org. It is intended to be run in the CI only. Running
+# this locally will have global side effects.
+
+# Create the credentials file
+mkdir -p "$HOME/.gem"
+echo -e "---\\r\\n:rubygems_api_key: $RUBYGEMS_API_KEY" > ~/.gem/credentials
+chmod 0600 "$HOME/.gem/credentials"
+
+# Publish the gem
+GEM_NAME="optimum-energy-rubocop"
+gem build "$GEM_NAME.gemspec"
+gem push "$GEM_NAME-$(cat VERSION.txt).gem"
