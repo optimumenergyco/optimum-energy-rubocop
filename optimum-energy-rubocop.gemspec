@@ -5,6 +5,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'The shared Rubocop configuration for Optimum Energy'
   spec.homepage = 'https://github.com/optimiumenergyco/optimum-energy-rubocop'
+  spec.license = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0")
 
