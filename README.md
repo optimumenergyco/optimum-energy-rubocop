@@ -14,11 +14,14 @@ regularly update this repo as we come across new rules.
 gem 'optimum-energy-rubocop'
 ```
 
-Create a `.rubocop.yml` file and add this to the top.
+Create a `.rubocop.yml` file and add this configuration.
 
 ```
 require:
   - optimum-energy-rubocop
+
+inherit_from:
+  - optimum_energy_rubocop.yml
 ```
 
 ## Updating This Gem
