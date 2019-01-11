@@ -5,10 +5,8 @@ configuration for [Optimum Energy](http://optimumenergyco.com/).
 
 ## Installation
 
-First, add `optimum-energy-rubocop` to your `Gemfile` and run `bundle install`.
-
-First, add the gem to your `Gemfile`. We recommend not locking in the version of the gem because we
-regularly update this repo as we come across new rules.
+First, add `optimum-energy-rubocop` to your `Gemfile` and run `bundle install`. We recommend not
+locking in the version of the gem because we regularly update this repo as we come across new rules.
 
 ```
 gem 'optimum-energy-rubocop'
