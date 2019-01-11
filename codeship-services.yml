@@ -2,3 +2,8 @@ optimum-energy-rubocop:
   build: .
   cached: true
   encrypted_env_file: deployment.env.encrypted
+
+shellcheck:
+  image: koalaman/shellcheck-alpine:stable
+  volumes:
+    - .:/app
