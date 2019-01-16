@@ -1,0 +1,14 @@
+-
+  name: run-shellcheck
+  service: shellcheck
+  command: sh -c "cd /app && shellcheck -x bin/*"
+
+-
+  name: rubocop
+  service: optimum-energy-rubocop
+  command: rubocop
+-
+  name: publish-to-rubygems
+  service: optimum-energy-rubocop
+  command: publish
+  tag: master

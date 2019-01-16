@@ -81,12 +81,13 @@ Naming/FileName:
     - 'spec/**/*'
     - '**/config.ru'
     - 'lib/tasks/**'
+
 Rails/BulkChangeTable:
   Enabled: false
-  
+
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
-  
+
 Style/ConditionalAssignment:
   EnforcedStyle: assign_to_condition
 
@@ -105,7 +106,7 @@ Style/FormatString:
   EnforcedStyle: percent
 
 # This won't be necessary when we upgrade to Ruby 3.0. Until then, rather than adding a comment to
-# every file, we should simply not mutate strings.
+# every file, we should not mutate strings.
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
@@ -125,8 +126,7 @@ Style/ReturnNil:
   Enabled: true
 
 Style/StringLiterals:
-  Exclude:
-    - 'spec/**/*'
+  EnforcedStyle: double_quotes
 
 Style/SymbolArray:
   MinSize: 3
