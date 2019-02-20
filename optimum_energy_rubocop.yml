@@ -182,4 +182,4 @@ Rails/RequestReferer:
   EnforcedStyle: referrer
 
 Rails/TimeZone:
-  EnforcedStyle: flexible
+  EnforcedStyle: strict
