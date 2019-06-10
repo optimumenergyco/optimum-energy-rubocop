@@ -15,7 +15,7 @@ Metrics/AbcSize:
 Layout/AlignHash:
   Enabled: false
 
-Layout/AlignParameters:
+Layout/AlignArguments:
   EnforcedStyle: with_fixed_indentation
 
 Layout/CaseIndentation:
