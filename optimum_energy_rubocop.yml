@@ -83,6 +83,9 @@ Naming/FileName:
     - '**/config.ru'
     - 'lib/tasks/**'
 
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+
 Rails/BulkChangeTable:
   Enabled: false
 
