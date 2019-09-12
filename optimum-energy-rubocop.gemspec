@@ -9,5 +9,5 @@ Gem::Specification.new do |spec|
 
   spec.files = `git ls-files -z`.split("\x0")
 
-  spec.add_dependency "rubocop", "~> 0.50"
+  spec.add_dependency "rubocop", "~> 0.74"
 end
