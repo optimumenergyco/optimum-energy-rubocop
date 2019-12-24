@@ -22,7 +22,6 @@ Layout/CaseIndentation:
   EnforcedStyle: end
 
 # Unfortuantely, this rule can't be refined to the point of being useful.
-# TODO: Move this into the base config.
 Layout/EmptyLinesAroundMethodBody:
   Enabled: false
 
@@ -32,8 +31,6 @@ Layout/EmptyLinesAroundExceptionHandlingKeywords:
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
-# Ideally, I would like to insert empty lines at the beginning on a class definition, but not at the
-# end. https://github.com/bbatsov/rubocop/issues/4812
 Layout/EmptyLinesAroundClassBody:
   Enabled: false
 
@@ -153,10 +150,6 @@ Rails/Date:
 Rails/FilePath:
   Enabled: false
 
-# TODO: Enable once this is fixed: https://github.com/bbatsov/rubocop/issues/5236
-Rails/InverseOf:
-  Enabled: false
-
 Rails/NotNullColumn:
   Enabled: false
 
@@ -179,8 +172,6 @@ Style/ConditionalAssignment:
 Style/Copyright:
   Enabled: false
 
-# TODO: Consider turning this on for controller methods in the future if we extract Swagger
-# documentation from them.
 Style/Documentation:
   Enabled: false
 
@@ -190,8 +181,8 @@ Style/DoubleNegation:
 Style/FormatString:
   EnforcedStyle: percent
 
-# This won't be necessary when we upgrade to Ruby 3.0. Until then, rather than adding a comment to
-# every file, we should not mutate strings.
+# TODO: This won't be necessary when we upgrade to Ruby 3.0. Until then, rather than adding a
+# comment to every file, we should only add it to the files where it's necessary.
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
@@ -218,7 +209,3 @@ Style/SymbolArray:
 
 Style/WordArray:
   MinSize: 3
-
-# TODO: Move this rule change into the base config.
-Style/ClassAndModuleChildren:
-  Enabled: false
