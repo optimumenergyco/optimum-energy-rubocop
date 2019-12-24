@@ -30,4 +30,4 @@ version is not changed, repos consuming this gem will not get the updates.
 
 ## Running Rubocop
 
-To run the cops, run `rubocop` from the command line.
+To run the cops locally for this repo, run `bundle exec rubocop` from the command line.
