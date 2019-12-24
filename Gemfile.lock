@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    optimum-energy-rubocop (0.6.0)
+    optimum-energy-rubocop (0.7.0)
       rubocop (~> 0.78)
       rubocop-rails (~> 2.4.0)
 
