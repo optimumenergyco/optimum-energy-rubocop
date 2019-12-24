@@ -8,20 +8,26 @@ AllCops:
     - 'db/schema.rb'
     - 'bin/*'
 
-Rails:
-  Enabled: true
-
-Metrics/AbcSize:
-  Enabled: false
-
-Layout/HashAlignment:
-  Enabled: false
+##########
+# LAYOUT #
+##########
 
 Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation
 
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+
 Layout/CaseIndentation:
   EnforcedStyle: end
+
+# Unfortuantely, this rule can't be refined to the point of being useful.
+# TODO: Move this into the base config.
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundExceptionHandlingKeywords:
+  Enabled: false
 
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
@@ -41,6 +47,8 @@ Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
   NumberOfEmptyLines: 1
 
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
 
 Layout/EndOfLine:
   EnforcedStyle: lf
@@ -56,6 +64,14 @@ Layout/FirstArrayElementIndentation:
 
 Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 100
+  AllowHeredoc: false
+  AllowURI: false
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
@@ -75,6 +91,39 @@ Layout/SpaceBeforeFirstArg:
 Layout/SpaceInsideStringInterpolation:
   EnforcedStyle: space
 
+###########
+# METRICS #
+###########
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Max: 100
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ClassLength:
+  Enabled: true
+  Max: 300
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 50
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+##########
+# NAMING #
+##########
+
 Naming/FileName:
   ExpectMatchingDefinition: true
   Exclude:
@@ -88,8 +137,38 @@ Naming/FileName:
 Naming/RescuedExceptionsVariableName:
   PreferredName: exception
 
+#########
+# RAILS #
+#########
+
+Rails:
+  Enabled: true
+
 Rails/BulkChangeTable:
   Enabled: false
+
+Rails/Date:
+  EnforcedStyle: strict
+
+Rails/FilePath:
+  Enabled: false
+
+# TODO: Enable once this is fixed: https://github.com/bbatsov/rubocop/issues/5236
+Rails/InverseOf:
+  Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
+
+Rails/RequestReferer:
+  EnforcedStyle: referrer
+
+Rails/TimeZone:
+  EnforcedStyle: strict
+
+#########
+# STYLE #
+#########
 
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
@@ -140,51 +219,6 @@ Style/SymbolArray:
 Style/WordArray:
   MinSize: 3
 
-Metrics/BlockLength:
-  Enabled: true
-  Max: 100
-  Exclude:
-    - 'spec/**/*'
-
-Metrics/ClassLength:
-  Enabled: true
-  Max: 300
-
-Metrics/CyclomaticComplexity:
+# TODO: Move this rule change into the base config.
+Style/ClassAndModuleChildren:
   Enabled: false
-
-Metrics/MethodLength:
-  Max: 50
-
-Layout/LineLength:
-  Max: 100
-  AllowHeredoc: false
-  AllowURI: false
-
-Metrics/PerceivedComplexity:
-  Enabled: false
-
-Layout/BlockAlignment:
-  EnforcedStyleAlignWith: start_of_block
-
-Layout/EndAlignment:
-  EnforcedStyleAlignWith: start_of_line
-
-Rails/Date:
-  EnforcedStyle: strict
-
-Rails/FilePath:
-  Enabled: false
-
-# TODO: Enable once this is fixed: https://github.com/bbatsov/rubocop/issues/5236
-Rails/InverseOf:
-  Enabled: false
-
-Rails/NotNullColumn:
-  Enabled: false
-
-Rails/RequestReferer:
-  EnforcedStyle: referrer
-
-Rails/TimeZone:
-  EnforcedStyle: strict
