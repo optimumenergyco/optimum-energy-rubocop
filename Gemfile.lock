@@ -1,25 +1,30 @@
 PATH
   remote: .
   specs:
-    optimum-energy-rubocop (0.6.0)
-      rubocop (~> 0.74)
+    optimum-energy-rubocop (0.7.0)
+      rubocop (~> 0.78)
+      rubocop-rails (~> 2.4.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.0)
-    jaro_winkler (1.5.3)
-    parallel (1.17.0)
-    parser (2.6.4.1)
+    jaro_winkler (1.5.4)
+    parallel (1.19.1)
+    parser (2.6.5.0)
       ast (~> 2.4.0)
+    rack (2.0.8)
     rainbow (3.0.0)
-    rubocop (0.74.0)
+    rubocop (0.78.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-rails (2.4.0)
+      rack (>= 1.1)
+      rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
     unicode-display_width (1.6.0)
 
@@ -30,7 +35,7 @@ DEPENDENCIES
   optimum-energy-rubocop!
 
 RUBY VERSION
-   ruby 2.6.4p104
+   ruby 2.6.5p114
 
 BUNDLED WITH
    1.17.2

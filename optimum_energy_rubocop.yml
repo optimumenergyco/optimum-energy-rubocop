@@ -1,31 +1,36 @@
 # This styleguide is built on top of the default Rubocop styleguide, located here:
 # https://github.com/bbatsov/rubocop/blob/master/config/default.yml.
 
+require: rubocop-rails
+
 AllCops:
   Exclude:
     - 'db/schema.rb'
     - 'bin/*'
 
-Rails:
-  Enabled: true
+##########
+# LAYOUT #
+##########
 
-Metrics/AbcSize:
-  Enabled: false
-
-Layout/AlignHash:
-  Enabled: false
-
-Layout/AlignArguments:
+Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation
+
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
 
 Layout/CaseIndentation:
   EnforcedStyle: end
 
+# Unfortuantely, this rule can't be refined to the point of being useful.
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundExceptionHandlingKeywords:
+  Enabled: false
+
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
-# Ideally, I would like to insert empty lines at the beginning on a class definition, but not at the
-# end. https://github.com/bbatsov/rubocop/issues/4812
 Layout/EmptyLinesAroundClassBody:
   Enabled: false
 
@@ -39,6 +44,8 @@ Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
   NumberOfEmptyLines: 1
 
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
 
 Layout/EndOfLine:
   EnforcedStyle: lf
@@ -46,14 +53,22 @@ Layout/EndOfLine:
 Layout/ExtraSpacing:
   AllowForAlignment: false
 
-Layout/IndentFirstArgument:
+Layout/FirstArgumentIndentation:
   EnforcedStyle: consistent
 
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 100
+  AllowHeredoc: false
+  AllowURI: false
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
@@ -73,6 +88,39 @@ Layout/SpaceBeforeFirstArg:
 Layout/SpaceInsideStringInterpolation:
   EnforcedStyle: space
 
+###########
+# METRICS #
+###########
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Max: 100
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ClassLength:
+  Enabled: true
+  Max: 300
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 50
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+##########
+# NAMING #
+##########
+
 Naming/FileName:
   ExpectMatchingDefinition: true
   Exclude:
@@ -86,8 +134,34 @@ Naming/FileName:
 Naming/RescuedExceptionsVariableName:
   PreferredName: exception
 
+#########
+# RAILS #
+#########
+
+Rails:
+  Enabled: true
+
 Rails/BulkChangeTable:
   Enabled: false
+
+Rails/Date:
+  EnforcedStyle: strict
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
+
+Rails/RequestReferer:
+  EnforcedStyle: referrer
+
+Rails/TimeZone:
+  EnforcedStyle: strict
+
+#########
+# STYLE #
+#########
 
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
@@ -98,8 +172,6 @@ Style/ConditionalAssignment:
 Style/Copyright:
   Enabled: false
 
-# TODO: Consider turning this on for controller methods in the future if we extract Swagger
-# documentation from them.
 Style/Documentation:
   Enabled: false
 
@@ -109,8 +181,8 @@ Style/DoubleNegation:
 Style/FormatString:
   EnforcedStyle: percent
 
-# This won't be necessary when we upgrade to Ruby 3.0. Until then, rather than adding a comment to
-# every file, we should not mutate strings.
+# TODO: This won't be necessary when we upgrade to Ruby 3.0. Until then, rather than adding a
+# comment to every file, we should only add it to the files where it's necessary.
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
@@ -137,52 +209,3 @@ Style/SymbolArray:
 
 Style/WordArray:
   MinSize: 3
-
-Metrics/BlockLength:
-  Enabled: true
-  Max: 100
-  Exclude:
-    - 'spec/**/*'
-
-Metrics/ClassLength:
-  Enabled: true
-  Max: 300
-
-Metrics/CyclomaticComplexity:
-  Enabled: false
-
-Metrics/MethodLength:
-  Max: 50
-
-Metrics/LineLength:
-  Max: 100
-  AllowHeredoc: false
-  AllowURI: false
-
-Metrics/PerceivedComplexity:
-  Enabled: false
-
-Layout/BlockAlignment:
-  EnforcedStyleAlignWith: start_of_block
-
-Layout/EndAlignment:
-  EnforcedStyleAlignWith: start_of_line
-
-Rails/Date:
-  EnforcedStyle: strict
-
-Rails/FilePath:
-  Enabled: false
-
-# TODO: Enable once this is fixed: https://github.com/bbatsov/rubocop/issues/5236
-Rails/InverseOf:
-  Enabled: false
-
-Rails/NotNullColumn:
-  Enabled: false
-
-Rails/RequestReferer:
-  EnforcedStyle: referrer
-
-Rails/TimeZone:
-  EnforcedStyle: strict
