@@ -94,8 +94,13 @@ Layout/SpaceInsideStringInterpolation:
 
 # Rubocop has a nasty habit of removing inline rule declarations, even when they're necessary. This
 # disables that behavior.
-# TODO: Push this rule back to the source.
 Lint/RedundantCopEnableDirective:
+  AutoCorrect: false
+
+Lint/UnusedBlockArgument:
+  AutoCorrect: false
+
+Lint/UnusedMethodArgument:
   AutoCorrect: false
 
 ###########
