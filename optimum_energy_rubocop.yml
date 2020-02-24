@@ -188,6 +188,9 @@ Style/Documentation:
 Style/DoubleNegation:
   Enabled: false
 
+Style/EmptyMethod:
+  AutoCorrect: false
+
 Style/FormatString:
   EnforcedStyle: percent
 
