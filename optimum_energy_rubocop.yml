@@ -91,12 +91,17 @@ Layout/SpaceInsideStringInterpolation:
 ########
 # LINT #
 ########
-  
+
 # Rubocop has a nasty habit of removing inline rule declarations, even when they're necessary. This
 # disables that behavior.
-# TODO: Push this rule back to the source.
 Lint/RedundantCopEnableDirective:
-  Autocorrect: false
+  AutoCorrect: false
+
+Lint/UnusedBlockArgument:
+  AutoCorrect: false
+
+Lint/UnusedMethodArgument:
+  AutoCorrect: false
 
 ###########
 # METRICS #
@@ -188,6 +193,9 @@ Style/Documentation:
 Style/DoubleNegation:
   Enabled: false
 
+Style/EmptyMethod:
+  AutoCorrect: false
+
 Style/FormatString:
   EnforcedStyle: percent
 
@@ -195,6 +203,15 @@ Style/FormatString:
 # comment to every file, we should only add it to the files where it's necessary.
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
 
 Style/MultilineBlockChain:
   Enabled: false
