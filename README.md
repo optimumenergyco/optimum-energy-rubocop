@@ -24,9 +24,10 @@ inherit_from:
 
 ## Updating This Gem
 
-After making changes to the rules in the [optimum_energy_rubocop.yml.yml](optimum_energy_rubocop.yml.yml) file, be sure that the version
-is bumped in both the [VERSION.txt](VERSION.txt) and [Gemfile.lock](Gemfile.lock) files. If the
-version is not changed, repos consuming this gem will not get the updates.
+After making changes to the rules in the [optimum_energy_rubocop.yml](optimum_energy_rubocop.yml)
+file, be sure that the version is bumped in both the [VERSION.txt](VERSION.txt) and
+[Gemfile.lock](Gemfile.lock) files. If the version is not changed, repos consuming this gem will not
+get the updates.
 
 ## Running Rubocop
 
