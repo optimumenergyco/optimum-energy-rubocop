@@ -79,6 +79,9 @@ Layout/MultilineOperationIndentation:
 Layout/SpaceInsideArrayLiteralBrackets:
   EnforcedStyle: space
 
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
 Layout/SpaceAroundOperators:
   AllowForAlignment: false
 
@@ -92,10 +95,16 @@ Layout/SpaceInsideStringInterpolation:
 # LINT #
 ########
 
+Lint/RaiseException:
+  Enabled: true
+
 # Rubocop has a nasty habit of removing inline rule declarations, even when they're necessary. This
 # disables that behavior.
 Lint/RedundantCopEnableDirective:
   AutoCorrect: false
+
+Lint/StructNewOverride:
+    Enabled: true
 
 Lint/UnusedBlockArgument:
   AutoCorrect: false
@@ -198,6 +207,9 @@ Style/EachWithObject:
 
 Style/EmptyMethod:
   AutoCorrect: false
+
+Style/ExponentialNotation:
+  AutoCorrect: true
 
 Style/FormatString:
   EnforcedStyle: percent
