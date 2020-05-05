@@ -209,6 +209,7 @@ Style/EmptyMethod:
   AutoCorrect: false
 
 Style/ExponentialNotation:
+  Enabled: true
   AutoCorrect: true
 
 Style/FormatString:
