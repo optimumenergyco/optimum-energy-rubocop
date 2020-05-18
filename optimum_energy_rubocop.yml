@@ -21,6 +21,9 @@ Layout/BlockAlignment:
 Layout/CaseIndentation:
   EnforcedStyle: end
 
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
 # Unfortuantely, this rule can't be refined to the point of being useful.
 Layout/EmptyLinesAroundMethodBody:
   Enabled: false
@@ -242,6 +245,9 @@ Style/RegexpLiteral:
   Enabled: false
 
 Style/ReturnNil:
+  Enabled: true
+
+Style/SlicingWithRange:
   Enabled: true
 
 Style/StringLiterals:
