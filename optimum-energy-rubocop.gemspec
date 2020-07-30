@@ -10,5 +10,5 @@ Gem::Specification.new do |spec|
   spec.files = `git ls-files -z`.split("\x0")
 
   spec.add_dependency "rubocop", "~> 0.80"
-  spec.add_dependency "rubocop-rails", "~> 2.4.2"
+  spec.add_dependency "rubocop-rails", "~> 2.7.1"
 end
