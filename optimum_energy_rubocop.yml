@@ -4,6 +4,7 @@
 require: rubocop-rails
 
 AllCops:
+  NewCops: disable
   Exclude:
     - 'db/schema.rb'
     - 'bin/*'
