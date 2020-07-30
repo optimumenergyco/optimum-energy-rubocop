@@ -4,7 +4,12 @@
 require: rubocop-rails
 
 AllCops:
+
+  # By default, Rubocop now displays warnings for all cops that are going to be enabled in the next
+  # minor version. This disables those cops. We'll pick them up when Rubocop decided they're good
+  # enough to enable by default for everyone.
   NewCops: disable
+
   Exclude:
     - 'db/schema.rb'
     - 'bin/*'
