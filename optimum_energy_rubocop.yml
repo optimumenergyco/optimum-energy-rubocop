@@ -80,6 +80,13 @@ Layout/MultilineMethodCallIndentation:
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
+# Ideally we'd be able to configure begin/rescue blocks to align how our other blocks do, but for
+# now there doesn't seem to be an option for it.
+#
+# TODO: Move this rule change to optimum-energy-rubocop-config.
+Layout/RescueEnsureAlignment:
+  Enabled: false
+
 Layout/SpaceInsideArrayLiteralBrackets:
   EnforcedStyle: space
 
@@ -178,6 +185,11 @@ Rails/Date:
 Rails/FilePath:
   Enabled: false
 
+# By default, the Rubocop Rails rules warn against using has_and_belongs_to_many. This disables that
+# behavior. Don't you tell me what to do Rubocop.
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
 Rails/NotNullColumn:
   Enabled: false
 
@@ -218,6 +230,10 @@ Style/ExponentialNotation:
 
 Style/FormatString:
   EnforcedStyle: percent
+
+# This rule is wrong for Rails validation messages.
+Style/FormatStringToken:
+  Enabled: false
 
 # TODO: This won't be necessary when we upgrade to Ruby 3.0. Until then, rather than adding a
 # comment to every file, we should only add it to the files where it's necessary.
