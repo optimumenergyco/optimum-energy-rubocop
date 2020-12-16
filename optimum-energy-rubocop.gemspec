@@ -1,6 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name = "optimum-energy-rubocop"
   spec.version = File.read("VERSION.txt")
+  spec.required_ruby_version = "~> 2.7"
   spec.authors = [ "Optimum Energy" ]
 
   spec.summary = "The shared Rubocop configuration for Optimum Energy"
