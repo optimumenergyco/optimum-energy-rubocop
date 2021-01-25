@@ -15,11 +15,8 @@ gem 'optimum-energy-rubocop'
 Create a `.rubocop.yml` file and add this configuration.
 
 ```
-require:
-  - optimum-energy-rubocop
-
-inherit_from:
-  - optimum_energy_rubocop.yml
+inherit_gem:
+  optimum-energy-rubocop: optimum_energy_rubocop.yml
 ```
 
 ## Updating This Gem
