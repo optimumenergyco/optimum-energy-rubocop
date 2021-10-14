@@ -212,6 +212,9 @@ Rails/TimeZone:
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
 
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 Style/ConditionalAssignment:
   EnforcedStyle: assign_to_condition
 
