@@ -78,6 +78,7 @@ Layout/LineLength:
   Max: 100
   AllowHeredoc: false
   AllowURI: false
+  AutoCorrect: true
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
@@ -210,6 +211,9 @@ Rails/TimeZone:
 
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
+
+Style/ClassAndModuleChildren:
+  Enabled: false
 
 Style/ConditionalAssignment:
   EnforcedStyle: assign_to_condition
