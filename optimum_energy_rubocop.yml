@@ -17,6 +17,12 @@ AllCops:
     - 'vendor/**/*'
     - 'tmp/**/*'
 
+##########
+# GEMSPEC #
+##########
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
 
 ##########
 # LAYOUT #
