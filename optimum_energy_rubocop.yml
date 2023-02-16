@@ -225,6 +225,9 @@ Style/AccessModifierDeclarations:
 Style/ClassAndModuleChildren:
   Enabled: false
 
+Style/CombinableLoops:
+  Enabled: false
+
 Style/ConditionalAssignment:
   EnforcedStyle: assign_to_condition
 
@@ -262,16 +265,25 @@ Style/FrozenStringLiteralComment:
 Style/HashEachMethods:
   Enabled: true
 
+Style/HashSyntax:
+  Enabled: false
+
 Style/HashTransformKeys:
   Enabled: true
 
 Style/HashTransformValues:
   Enabled: true
 
+Style/HashLikeCase:
+  Enabled: false
+
 Style/MultilineBlockChain:
   Enabled: false
 
 Style/MultilineTernaryOperator:
+  Enabled: false
+
+Style/OptionalBooleanParameter:
   Enabled: false
 
 Style/PercentLiteralDelimiters:
