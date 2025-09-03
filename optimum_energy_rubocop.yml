@@ -1,21 +1,20 @@
 # This styleguide is built on top of the default Rubocop styleguide, located here:
 # https://github.com/bbatsov/rubocop/blob/master/config/default.yml.
 
-require: rubocop-rails
+plugins: rubocop-rails
 
 AllCops:
-
   # By default, Rubocop now displays warnings for all cops that are going to be enabled in the next
   # minor version. This disables those cops. We'll pick them up when Rubocop decided they're good
   # enough to enable by default for everyone.
   NewCops: disable
 
   Exclude:
-    - 'db/schema.rb'
-    - 'bin/*'
-    - 'node_modules/**/*'
-    - 'vendor/**/*'
-    - 'tmp/**/*'
+    - "db/schema.rb"
+    - "bin/*"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+    - "tmp/**/*"
 
 ##########
 # GEMSPEC #
@@ -131,7 +130,7 @@ Lint/RedundantCopEnableDirective:
   AutoCorrect: false
 
 Lint/StructNewOverride:
-    Enabled: true
+  Enabled: true
 
 Lint/UnusedBlockArgument:
   AutoCorrect: false
@@ -150,7 +149,7 @@ Metrics/BlockLength:
   Enabled: true
   Max: 100
   Exclude:
-    - 'spec/**/*'
+    - "spec/**/*"
 
 Metrics/ClassLength:
   Enabled: true
@@ -175,12 +174,12 @@ Metrics/PerceivedComplexity:
 Naming/FileName:
   ExpectMatchingDefinition: true
   Exclude:
-    - 'config/**/*'
-    - 'bin/**/*'
-    - 'db/**/*'
-    - 'spec/**/*'
-    - '**/config.ru'
-    - 'lib/tasks/**'
+    - "config/**/*"
+    - "bin/**/*"
+    - "db/**/*"
+    - "spec/**/*"
+    - "**/config.ru"
+    - "lib/tasks/**"
 
 Naming/RescuedExceptionsVariableName:
   PreferredName: exception
